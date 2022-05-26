@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let firstNumber = prompt("Enter a first number:", "");
+        const operator = prompt("Enter an operator:", "");
+        let secondNumber = prompt("Enter a second number:", "");
+
+        if ((firstNumber !== null && firstNumber !== "") && (secondNumber !== null && secondNumber !== "") && (operator !== null && operator !== "")) {
+
+            firstNumber = Number(firstNumber);
+            secondNumber = Number(secondNumber);
+
+            if (operator === "+") {    
+                alert(`Your result is ${firstNumber + secondNumber}`);
+            } else if (operator === "-") {
+                alert(`Your result is ${firstNumber - secondNumber}`);
+            } else if (operator === "*") {
+                alert(`Your result is ${firstNumber * secondNumber}`);
+            } else if (operator === "/") {
+                alert(`Your result is ${firstNumber / secondNumber}`);
+            } else {
+                alert("Incorrect operator!");
+            }
+
+            if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
+                alert("Sorry, there is the wrong number!");
+            } else {
+                alert("Have a nice day!");
+            }
+            
+        } else {
+            alert("Incorrect input!");
+        }
+    </script>
+</body>
+</html>
