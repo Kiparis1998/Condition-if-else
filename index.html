@@ -16,7 +16,11 @@
             firstNumber = Number(firstNumber);
             secondNumber = Number(secondNumber);
 
-            if (operator === "+") {    
+            if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
+                alert("Sorry, there is the wrong number!");
+                
+            } else {
+                if (operator === "+") {    
                 alert(`Your result is ${firstNumber + secondNumber}`);
             } else if (operator === "-") {
                 alert(`Your result is ${firstNumber - secondNumber}`);
@@ -27,11 +31,6 @@
             } else {
                 alert("Incorrect operator!");
             }
-
-            if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
-                alert("Sorry, there is the wrong number!");
-            } else {
-                alert("Have a nice day!");
             }
             
         } else {
